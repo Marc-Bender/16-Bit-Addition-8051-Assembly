@@ -15,7 +15,7 @@ init:			mov 	sum16AL, #0xab ; Some example values for the operands
 			mov	sum16BH, #0x01
 			lcall   _16BitAdd
 loop_forever:		sjmp 	loop_forever
-_16BitAdd:		mov 	psw, #0x00d
+_16BitAdd:		mov 	psw, #0d
 			mov	a, sum16AL
 			mov	b, sum16BL
 			addc	a, b
